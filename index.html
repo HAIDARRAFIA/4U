@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Ucapan Selamat Ulang Tahun!</title>
+  <style>
+    /* Sembunyikan elemen audio */
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+
+<!-- Di dalam tag <head> -->
+  <head>
+    <!-- ... (kode sebelumnya) ... -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      /* ... (kode sebelumnya) ... */
+  
+      /* Gaya button yang menarik */
+      button {
+        background-color: #4CAF50; /* Warna latar belakang */
+        color: white; /* Warna teks */
+        padding: 15px 20px; /* Padding pada teks */
+        font-size: 16px; /* Ukuran teks */
+        border: none; /* Tanpa border */
+        border-radius: 5px; /* Sudut elemen dibulatkan */
+        cursor: pointer;
+        animation: heartbeat 1.5s infinite; /* Kursor berubah menjadi tanda tangan saat diarahkan */
+      }
+
+      @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+  
+      /* Gaya button saat dihover */
+      button:hover {
+        background-color: #45a049; /* Warna latar belakang berubah saat dihover */
+      }
+
+      /* Animation for falling stars */
+      .stars {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #fff;
+            animation: starsAnimation 15s linear infinite;
+            opacity: 0;
+            box-shadow: 0 0 5px #00f0bc;
+            border-radius: 50%;
+        }
+
+        @keyframes starsAnimation {
+            from {
+                transform: translateY(0) rotate(0deg) scale(1);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(100vh) rotate(360deg) scale(2);
+                opacity: 0;
+            }
+        }
+
+        /* Add more star elements as needed */
+        .star1 {
+            top: 0;
+            left: 10%;
+            animation-duration: 7s;
+        }
+
+        .star2 {
+            top: 0;
+            left: 50%;
+            animation-duration: 12s;
+        }
+
+        .star3 {
+            top: 0;
+            left: 90%;
+            animation-duration: 10s;
+        }
+
+        .star4 {
+            top: 0;
+            left: 20%;
+            animation-duration: 9s;
+        }
+
+        .star5 {
+            top: 0;
+            left: 80%;
+            animation-duration: 14s;
+        }
+
+        .star6 {
+            top: 0;
+            left: 40%;
+            animation-duration: 11s;
+        }
+
+        /* Footer styles */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #081b29;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        footer p {
+            color: white;
+            margin: 0;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="stars star1"></div>
+    <div class="stars star2"></div>
+    <div class="stars star3"></div>
+    <div class="stars star4"></div>
+    <div class="stars star5"></div>
+    <div class="stars star6"></div>
+    </style>
+  </head>
+  
+
+<body>
+  <!-- Add an overlay for fireworks -->
+  <div class="fireworks-overlay"></div>
+
+  <div class="container">
+    <header>
+      <h1>Selamat Ulang Tahun!</h1>
+    </header>
+    <img src="ulangtahun.jpg" alt="Disini, aku Haidar Rafi mau mengucapkan">
+    <p>Selamat ulang tahun SAFFA DHIYA UR RAHMA! Semoga hari ini esok dan lusa penuh kebahagiaan dan berkah, selalu menjadi kebanggan orang tua sehat dunia akhirat dan berguna bagi bangsa. Selalu mebgutamakan ibadah dan jangan pernah lupa orang2 yang selalu ada buat kamu sampai detik ini, kamu hebat sampai di titik ini, kejar terus cita2 mu setinggi2 nya, aku selalu ngesupport kamu. Terima kasih telah menjadi bagian dari hidup aku yang tanpa disengaja.</p>
+
+    <!-- Tambahkan elemen audio untuk menambahkan lagu dan aktifkan autoplay -->
+    <audio controls autoplay id="birthdayAudio">
+      <source src="hbd.mp3" type="audio/mp3">
+      Your browser does not support the audio tag
+    </audio>
+
+    <!-- Tambahkan button Lanjutkan -->
+    <button onclick="fadeOutElements()">LANJUT DONG KALO UDH BACA</button>
+  </div>
+  <script>
+    function fadeOutElements() {
+      // Mengatur animasi fade-out pada container
+      var container = document.querySelector('.container');
+      container.classList.add('fade-out');
+  
+      // Mengatur animasi fade-out pada button
+      var button = document.querySelector('button');
+      button.classList.add('fade-out');
+  
+      // Setelah animasi selesai, arahkan ke halaman berikutnya
+      setTimeout(function () {
+        window.location.href = 'index2.html';
+      }, 1000); // Sesuaikan waktu animasi container (1s)
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>

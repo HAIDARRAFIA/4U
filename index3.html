@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAI KAMU</title>
+    <style>
+
+        
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #000000, #800000);
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            animation: scrollAnimation 23s linear infinite;
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .center-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            z-index: 1;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #ff0000; /* Red color, you can change it */
+            color: #ffffff; /* White text, you can change it */
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        button {
+            color: #fff;
+            padding: 15px 32px;
+            border-radius: 150%;
+            justify-content: center;
+            align-items: center;
+            width: 250px;
+            background: #800000;
+            border: 0px solid #00f0bc;
+            border-radius: 10px;
+            font-size: 17px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            overflow: hidden;
+            transition: 0.5s;
+            cursor: pointer;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        body {
+    /* ... (tetapkan gaya lainnya) */
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Tambahan untuk animasi fade out saat meninggalkan halaman */
+body.leaving {
+    animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        button:hover {
+            background-color: #3a0000;
+            transform: scale(1.05);
+        }
+
+        @media only screen and (max-width: 600px) {
+            /* Adjust styles for small screens */
+            button {
+                width: 150px;
+                font-size: 16px;
+            }
+        }
+        
+
+        /* Animasi saat scrolling */
+        @keyframes scrollAnimation {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            25%, 75% {
+                transform: translateY(calc(-100% * 5));
+            }
+            50% {
+                transform: translateY(calc(-100% * 10));
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .image-container {
+                animation: scrollAnimation 23s linear infinite; /* Sesuaikan durasi animasi untuk layar yang lebih kecil */
+            }
+        }
+
+        /* Add more media queries as needed */
+
+    </style>
+</head>
+<body>
+    <div class="center-text">
+        <p>Kamu Tuh Cocok Dengan Lagu Ini Tau.</p>
+        <form action="index4.html">
+            <button>LANJUT DONG</button>
+        </form>
+    </div>
+
+<!-- Tambahkan elemen audio -->
+<audio autoplay>
+    <source src="penjagahati.mp3" type="audio/mp3">
+</audio>
+
+<div class="container">
+    <div class="image-container">
+        <img class="image" src="gambar1.jpg" alt="Gambar 1">
+        <img class="image" src="gambar2.jpg" alt="Gambar 2">
+        <img class="image" src="gambar3.jpg" alt="Gambar 3">
+        <img class="image" src="gambar4.jpg" alt="Gambar 4">
+        <img class="image" src="gambar5.jpg" alt="Gambar 5">
+        <img class="image" src="gambar6.jpg" alt="Gambar 6">
+        <img class="image" src="gambar7.jpg" alt="Gambar 7">
+        <img class="image" src="gambar8.jpg" alt="Gambar 8">
+        <img class="image" src="gambar9.jpg" alt="Gambar 9">
+        <img class="image" src="gambar10.jpg" alt="Gambar 10">
+        <!-- Tambahkan lebih banyak gambar sesuai kebutuhan -->
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+// Tambahkan event listener untuk mendeteksi ketika pengguna meninggalkan halaman
+window.addEventListener('beforeunload', function () {
+    document.body.classList.add('leaving');
+});
+});
+</script>
+
+</body>
+</html>

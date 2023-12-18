@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HALO</title>
+    <link rel="icon" href="image/logo.png" type="image/png" sizes="16x16 32x32">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #000000, #800000);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            animation: backgroundAnimation 10s infinite;
+            overflow: hidden;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: center;
+            }
+            50% {
+                background-position: top;
+            }
+            100% {
+                background-position: center;
+            }
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            position: relative;
+            color: white;
+            margin-bottom: px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 2;
+        }
+
+        button {
+            color: #fff;
+            padding: 15px 32px;
+            border-radius: 150%;
+            justify-content: center;
+            align-items: center;
+            width: 250px;
+            background: #00f0bc;
+            border: 2px solid #00f0bc;
+            border-radius: 10px;
+            font-size: 17px;
+            color: #081b29;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            overflow: hidden;
+            transition: 0.5s;
+            cursor: pointer;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        button:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        @media only screen and (max-width: 600px) {
+            /* Adjust styles for small screens */
+            button {
+                width: 150px;
+                font-size: 16px;
+            }
+        }
+
+        /* Animation for falling stars */
+        .stars {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #fff;
+            animation: starsAnimation 15s linear infinite;
+            opacity: 0;
+            box-shadow: 0 0 5px #00f0bc;
+            border-radius: 50%;
+        }
+
+        @keyframes starsAnimation {
+            from {
+                transform: translateY(0) rotate(0deg) scale(1);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(100vh) rotate(360deg) scale(2);
+                opacity: 0;
+            }
+        }
+
+        /* Add more star elements as needed */
+        .star1 {
+            top: 0;
+            left: 10%;
+            animation-duration: 7s;
+        }
+
+        .star2 {
+            top: 0;
+            left: 50%;
+            animation-duration: 12s;
+        }
+
+        .star3 {
+            top: 0;
+            left: 90%;
+            animation-duration: 10s;
+        }
+
+        .star4 {
+            top: 0;
+            left: 20%;
+            animation-duration: 9s;
+        }
+
+        .star5 {
+            top: 0;
+            left: 80%;
+            animation-duration: 14s;
+        }
+
+        .star6 {
+            top: 0;
+            left: 40%;
+            animation-duration: 11s;
+        }
+
+        /* Footer styles */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #081b29;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        footer p {
+            color: white;
+            margin: 0;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="stars star1"></div>
+    <div class="stars star2"></div>
+    <div class="stars star3"></div>
+    <div class="stars star4"></div>
+    <div class="stars star5"></div>
+    <div class="stars star6"></div>
+
+    <h1>Halloo Saffa Dhiya Ur Rahma</h1>
+    <form action="index.html">
+        <button>PENCET TOMBOL INI DONG</button>
+    </form>
+</body>
+
+</html>

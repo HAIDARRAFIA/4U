@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styyles1.css">
+    <title>Greetings Card</title>
+</head>
+<style>
+    body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #000000, #800000);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            animation: backgroundAnimation 10s infinite;
+            overflow: hidden;
+        }
+         /* Animation for falling stars */
+         .stars {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #fff;
+            animation: starsAnimation 15s linear infinite;
+            opacity: 0;
+            box-shadow: 0 0 5px #00f0bc;
+            border-radius: 50%;
+        }
+
+        @keyframes starsAnimation {
+            from {
+                transform: translateY(0) rotate(0deg) scale(1);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(100vh) rotate(360deg) scale(2);
+                opacity: 0;
+            }
+        }
+
+        /* Add more star elements as needed */
+        .star1, .star2, .star3, .star4, .star5, .star6 {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #fff;
+            animation: starsAnimation 15s linear infinite;
+            opacity: 0;
+            box-shadow: 0 0 5px #00f0bc;
+            border-radius: 50%;
+        }
+
+        .star1 {
+            top: 0;
+            left: 10%;
+            animation-duration: 7s;
+        }
+
+        .star2 {
+            top: 0;
+            left: 50%;
+            animation-duration: 12s;
+        }
+
+        .star3 {
+            top: 0;
+            left: 90%;
+            animation-duration: 10s;
+        }
+
+        .star4 {
+            top: 0;
+            left: 20%;
+            animation-duration: 9s;
+        }
+
+        .star5 {
+            top: 0;
+            left: 80%;
+            animation-duration: 14s;
+        }
+
+        .star6 {
+            top: 0;
+            left: 40%;
+            animation-duration: 11s;
+        }
+
+        /* Container for text and buttons */
+        .content-container {
+            text-align: center;
+            position: relative;
+        }
+
+        /* Styling for the buttons */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer styles */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+            margin: 5;
+        }
+        body {
+    /* ... (tetapkan gaya lainnya) */
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+.whatsapp-button {
+            background-color: #25d366;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            border: none;
+            border-radius:20px;
+            cursor: pointer;
+            margin: 25px;
+            transition: background-color 0.3s;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+        }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Tambahan untuk animasi fade out saat meninggalkan halaman */
+body.leaving {
+    animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+    </style>
+</head>
+
+    <!-- Stars -->
+    <div class="stars star1"></div>
+    <div class="stars star2"></div>
+    <div class="stars star3"></div>
+    <div class="stars star4"></div>
+    <div class="stars star5"></div>
+    <div class="stars star6"></div>
+
+</style>
+<body>
+
+    <div class="greeting-card">
+        <h1>HALO!, Ini halaman terakhir di website ku ini.</h1>
+        <p>Terima kasih telah mengunjungi halaman demi halaman dari website pemrograman aku buat kamu. Semoga harimu menyenangkan!, disini aku "Haidar" cuman mau bilang ke kamu banyak terimakasih atas semuanya yang telah kamu kasih buat aku walaupun kita baru kenal brp lama, aku merasa kek kamu nih beda dari yang sebelum2 nya, kamu ngasih aku feedback yang setara dan menerima segalanya yang aku kasih ke kamu walaupun sederhana, aku masih ga nyangka aku yang selalu di sia siain gapernah dihargai kaya sekarang mendapatkan hal itu, makasih banget karena sama kamu sekarang aku banyak senengnya jadi tolong jangan heran jika aku ngajak kamu main terus, aku gatau mau gimana lagi buat terimakasih sama kamu, aku harap ya kita selalu kaya gini2 aja yaaa, hehehe makaasihh bangett aku bahagia polll, sekali lagi terimakasih dan selamat bertambah usia yang ke 14 bocill, semooga tambah pinterr cantik soleh dan bisa membanggakan orang tua, aku cuman bisa ngasih gini doang maaf banget yahh, hadiah bentuk nyata nya kapan2 aku beliin buat kamuu, sekian terimakasih SAFFA DHIYA UR RAHMA. :) </p>
+    </div>
+
+</div>
+
+<!-- Tombol WhatsApp -->
+<a href="https://wa.me/+6285228039929" target="_blank"
+    class="whatsapp-button">Hubungi Saya di WhatsApp</a>
+
+</body>
+<audio autoplay>
+    <source src="stay.mp3" type="audio/mp3">
+</audio>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+// Tambahkan event listener untuk mendeteksi ketika pengguna meninggalkan halaman
+window.addEventListener('beforeunload', function () {
+    document.body.classList.add('leaving');
+});
+});
+</script>
+</html>

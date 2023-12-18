@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAU GA</title>
+    <link rel="icon" href="image/logo.png" type="image/png" sizes="16x16 32x32">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #000000, #800000);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            animation: backgroundAnimation 10s infinite;
+            overflow: hidden;
+        }
+
+        /* Animation for falling stars */
+        .stars {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #fff;
+            animation: starsAnimation 15s linear infinite;
+            opacity: 0;
+            box-shadow: 0 0 5px #00f0bc;
+            border-radius: 50%;
+        }
+
+        @keyframes starsAnimation {
+            from {
+                transform: translateY(0) rotate(0deg) scale(1);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(100vh) rotate(360deg) scale(2);
+                opacity: 0;
+            }
+        }
+
+        /* Add more star elements as needed */
+        .star1, .star2, .star3, .star4, .star5, .star6 {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #fff;
+            animation: starsAnimation 15s linear infinite;
+            opacity: 0;
+            box-shadow: 0 0 5px #00f0bc;
+            border-radius: 50%;
+        }
+
+        .star1 {
+            top: 0;
+            left: 10%;
+            animation-duration: 7s;
+        }
+
+        .star2 {
+            top: 0;
+            left: 50%;
+            animation-duration: 12s;
+        }
+
+        .star3 {
+            top: 0;
+            left: 90%;
+            animation-duration: 10s;
+        }
+
+        .star4 {
+            top: 0;
+            left: 20%;
+            animation-duration: 9s;
+        }
+
+        .star5 {
+            top: 0;
+            left: 80%;
+            animation-duration: 14s;
+        }
+
+        .star6 {
+            top: 0;
+            left: 40%;
+            animation-duration: 11s;
+        }
+
+        /* Container for text and buttons */
+        .content-container {
+            text-align: center;
+            position: relative;
+        }
+
+        /* Styling for the buttons */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer styles */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+            margin: 5;
+        }
+
+        body {
+    /* ... (tetapkan gaya lainnya) */
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Tambahan untuk animasi fade out saat meninggalkan halaman */
+body.leaving {
+    animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <div class="content-container">
+        <h1>Kamu Mau Tau Gaa?</h1>
+        <button onclick="onYesClick()">MAU TAU</button>
+        <button onclick="onOhNoClick()">GAK MAU</button>
+        
+    </div>
+
+    <!-- Stars -->
+    <div class="stars star1"></div>
+    <div class="stars star2"></div>
+    <div class="stars star3"></div>
+    <div class="stars star4"></div>
+    <div class="stars star5"></div>
+    <div class="stars star6"></div>
+
+    <!-- Script JavaScript (jika diperlukan) -->
+    <script>
+        function onYesClick() {
+            // Logika atau aksi yang akan dijalankan saat tombol "Ya" diklik
+            console.log("Anda memilih Ya");
+            window.location.href = 'index3.html';
+        }
+
+        function onOhNoClick() {
+            // Logika atau aksi yang akan dijalankan saat tombol "Oh No" diklik
+            console.log("Anda memilih Oh No");
+
+            // Mengambil tombol "ENGGA MAU"
+            var buttonNo = document.querySelector('.content-container button:nth-child(3)');
+
+            // Menghitung posisi acak relatif terhadap elemen induknya
+            var offsetX = Math.random() * 50 - 25; // -25 hingga 25
+            var offsetY = Math.random() * 50 - 25; // -25 hingga 25
+
+            // Mengatur posisi acak
+            buttonNo.style.position = 'absolute';
+            buttonNo.style.left = 'calc(50% + ' + offsetX + 'px)';
+            buttonNo.style.top = 'calc(50% + ' + offsetY + 'px)';
+        }
+        
+        document.addEventListener('DOMContentLoaded', function () {
+    // Tambahkan event listener untuk mendeteksi ketika pengguna meninggalkan halaman
+    window.addEventListener('beforeunload', function () {
+        document.body.classList.add('leaving');
+    });
+});
+    </script>
+</body>
+
+</html>
